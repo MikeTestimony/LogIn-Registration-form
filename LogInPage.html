@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REGISTRATION FORM</title>
+  <link rel="stylesheet" href="LogInPage.css ">
+</head>
+<body>
+    <div id="formContainer">
+    <h1 id="title">Registration Form</h1>
+    <form action="/submit" method="POST" id="registrationForm">
+      
+      <div class="form-row">
+        <input type="text" class="field" name="firstName" placeholder="First Name" required>
+        <input type="text" class="field" name="lastName" placeholder="Last Name" required>
+      </div>
+
+      <input type="text" class="field" name="username" placeholder="Create Username" required>
+      
+      <input type="email" class="field" name="email" placeholder="Email: example@gmail.com" required>
+      
+      <div class="form-row">
+        <input type="password" class="field" name="password" placeholder="Create Password" required minlength="6">
+        <input type="password" class="field" name="confirmPassword" placeholder="Confirm Password" required minlength="6">
+      </div>
+
+      <input type="tel" class="field" name="phone" placeholder="Phone: +233549062449" required>
+      
+      <input type="date" class="field" name="birthDate" required>
+
+      <div class="gender-group">
+        <label class="gender-label">Gender:</label>
+        <div class="radio-group">
+          <div class="radio-item">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label>
+          </div>
+        </div>
+      </div>
+
+      <textarea name="comments" rows="4" class="field" placeholder="Additional Comments (Optional)"></textarea>
+      
+      <div id="subFieldContainer">
+        <button type="submit" class="subField" id="submitBtn">Submit</button>
+        <button type="reset" class="subField" id="resetBtn">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="LogInPage.js"></script>
+</body>
+</html>
